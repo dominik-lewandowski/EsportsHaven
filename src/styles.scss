@@ -1,1 +1,117 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'styles/colors';
+@use 'styles/breakpoints';
+
+@import '~@drizm/buttons/scss/styles';
+@import 'styles/fonts';
+
+// @drizm/buttons override
+:root {
+  --dbtn-color-primary: colors.$primary;
+  --dbtn-hover-primary: colors.$primary-light;
+  --dbtn-active-primary: colors.$primary-lightest;
+
+  --dbtn-radius-huge: 25px;
+}
+
+* {
+  box-sizing: border-box;
+
+  & [routerLink] {
+    outline: none;
+  }
+}
+
+a {
+  outline: none;
+  border: none;
+  color: colors.$primary;
+  font-weight: 500;
+  transition: color .2s;
+
+  &:hover {
+    color: colors.$primary-lightest;
+  }
+}
+
+html, body {
+  font-size: 1.25rem;
+  color: colors.$dark;
+}
+
+input, textarea {
+  color: colors.$dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  background: colors.$background;
+}
+
+dzm-button {
+  width: min-content;
+}
+
+//better scrollbar
+::-webkit-scrollbar {
+  width: .4vw;
+  height: .4vw;
+  min-width: 6px;
+  min-height: 6px;
+  background-color: rgba(0, 0, 0, 0);
+
+  &-thumb {
+    border-radius: 25px;
+    background: colors.$primary;
+
+    &:hover {
+      background: colors.$primary-light;
+    }
+
+    &:active {
+      background: colors.$primary-lightest;
+    }
+  }
+}
+
+button {
+  font-family: Montserrat, sans-serif;
+}
+
+@media (min-width: breakpoints.$sm) {
+  html, body {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: breakpoints.$md) {
+  html, body {
+    font-size: 1.75rem;
+  }
+}
+
+
+@media (min-width: breakpoints.$lg) {
+  html, body {
+    font-size: .95rem;
+  }
+}
+
+@media (min-width: breakpoints.$xl) {
+  html, body {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: breakpoints.$xxl) {
+  html, body {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: breakpoints.$xxxl) {
+  html, body {
+    font-size: 1.3rem;
+  }
+}

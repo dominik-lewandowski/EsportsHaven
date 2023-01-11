@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# atom, molecule, organism, page, template
+TYPE=$1
+NAME=$2
+INLINE_CSS=false
+INLINE_TEMPLATE=false
+EXPORT_COMPONENT=true
+
+if [ "$TYPE" = "organism" ]; then
+elif [ "$TYPE" = "page" ]; then
+    INLINE_CSS=true
+    EXPORT_COMPONENT=false
+elif [ "$TYPE" = "atom" ]; then
+    INLINE_CSS=true
+    INLINE_TEMPLATE=true
+fi
+
+(
+  set -o xtrace &&
+  ng g m components/"$TYPE"s/"$NAME" &&
+  ng g c --inline-style="$INLINE_CSS" --inline-template="$INLINE_TEMPLATE" --export="$EXPORT_COMPONENT" components/"$TYPE"s/"$NAME"
+) && echo "$TYPE $NAME created successfully." || echo "An error has occurred."
