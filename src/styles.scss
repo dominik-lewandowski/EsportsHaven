@@ -1,7 +1,7 @@
 @use 'styles/colors';
 @use 'styles/breakpoints';
 
-@import '~@drizm/buttons/scss/styles';
+@import '@drizm/buttons/scss/styles';
 @import 'styles/fonts';
 
 // @drizm/buttons override
