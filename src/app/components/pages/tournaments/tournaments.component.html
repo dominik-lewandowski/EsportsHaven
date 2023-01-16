@@ -1,2 +1,6 @@
 <eh-tournaments-template>
+  <ng-container *ngFor="let tournament of tournaments; trackBy: trackByFn" tournaments>
+    <eh-tournament [tournament]="tournament">
+    </eh-tournament>
+  </ng-container>
 </eh-tournaments-template>
