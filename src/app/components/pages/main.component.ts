@@ -2,6 +2,7 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MainTemplateComponent} from '../templates/main-template.component';
 import {RouterOutlet} from '@angular/router';
+import {NavComponent} from '../organisms/nav/nav.component';
 
 @Component({
   standalone: true,
@@ -11,7 +12,8 @@ import {RouterOutlet} from '@angular/router';
   imports: [
     CommonModule,
     MainTemplateComponent,
-    RouterOutlet
+    RouterOutlet,
+    NavComponent
   ]
 })
 export class MainComponent {

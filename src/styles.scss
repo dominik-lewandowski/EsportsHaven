@@ -1,10 +1,10 @@
 @use 'styles/colors';
-@use 'styles/breakpoints';
+@use 'styles/mixins';
 
 @import '@drizm/buttons/scss/styles';
 @import 'styles/fonts';
 
-// @drizm/buttons override
+// --- @drizm/buttons override
 :root {
   --dbtn-color-primary: colors.$primary;
   --dbtn-hover-primary: colors.$primary-light;
@@ -12,6 +12,7 @@
 
   --dbtn-radius-huge: 25px;
 }
+// ---
 
 * {
   box-sizing: border-box;
@@ -21,10 +22,13 @@
   }
 }
 
+// --- Links
 a {
+  width: min-content;
+  cursor: pointer;
   outline: none;
   border: none;
-  color: colors.$primary;
+  color: colors.$white;
   font-weight: 500;
   transition: color .2s;
 
@@ -32,10 +36,35 @@ a {
     color: colors.$primary-lightest;
   }
 }
+// ---
 
 html, body {
-  font-size: 1.25rem;
+  font-size: 20px;
   color: colors.$dark;
+
+  @include mixins.responsive("sm") {
+    font-size: 24px;
+  }
+
+  @include mixins.responsive("md") {
+    font-size: 28px;
+  }
+
+  @include mixins.responsive("lg") {
+    font-size: 15px;
+  }
+
+  @include mixins.responsive("xl") {
+    font-size: 18px;
+  }
+
+  @include mixins.responsive("xxl") {
+    font-size: 20px;
+  }
+
+  @include mixins.responsive("xxxl") {
+    font-size: 21px;
+  }
 }
 
 input, textarea {
@@ -45,7 +74,7 @@ input, textarea {
 body {
   margin: 0;
   padding: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: Ubuntu, sans-serif;
   background: colors.$background;
 }
 
@@ -77,41 +106,4 @@ dzm-button {
 
 button {
   font-family: Montserrat, sans-serif;
-}
-
-@media (min-width: breakpoints.$sm) {
-  html, body {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: breakpoints.$md) {
-  html, body {
-    font-size: 1.75rem;
-  }
-}
-
-
-@media (min-width: breakpoints.$lg) {
-  html, body {
-    font-size: .95rem;
-  }
-}
-
-@media (min-width: breakpoints.$xl) {
-  html, body {
-    font-size: 1.125rem;
-  }
-}
-
-@media (min-width: breakpoints.$xxl) {
-  html, body {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width: breakpoints.$xxxl) {
-  html, body {
-    font-size: 1.3rem;
-  }
 }

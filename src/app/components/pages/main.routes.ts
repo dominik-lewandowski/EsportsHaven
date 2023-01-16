@@ -4,6 +4,17 @@ import {MainComponent} from './main.component';
 export default [
   {
     path: "",
-    component: MainComponent
+    component: MainComponent,
+    children: [
+      {
+        path: "",
+        redirectTo: "tournaments",
+        pathMatch: "full"
+      },
+      {
+        path: "tournaments",
+        loadChildren: () => import("./tournaments/tournaments.routes")
+      }
+    ]
   }
 ] as Routes;

@@ -1,0 +1,27 @@
+@use "./breakpoints";
+
+$breakpoints: (
+  "xs": ( min-width: breakpoints.$xs ),
+  "sm": ( min-width: breakpoints.$sm ),
+  "md": ( min-width: breakpoints.$md ),
+  "lg": ( min-width: breakpoints.$lg ),
+  "xl": ( min-width: breakpoints.$xl ),
+  "xxl": ( min-width: breakpoints.$xxl ),
+  "xxxl": ( min-width: breakpoints.$xxxl ),
+) !default;
+
+@mixin responsive($breakpoint) {
+// If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
