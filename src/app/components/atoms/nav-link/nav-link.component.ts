@@ -11,47 +11,33 @@ import {RouterLink, RouterLinkActive} from '@angular/router';
           <div class="navLink__content">
               <ng-content></ng-content>
           </div>
-
-          <div class="navLink__line">
-          </div>
       </div>
   `,
   styles: [`
-    @use "../../../../styles/colors";
+    @use "../../../../styling/colors";
+    @use "../../../../styling/variables";
 
     .navLink {
-      width: min-content;
       height: min-content;
       cursor: pointer;
       outline: none;
       border: none;
       color: colors.$white;
-      font-weight: 500;
+      border-radius: 5px;
+      padding: .375rem 0;
+      padding-left: .5rem;
+      width: 100%;
+      transition: background-color variables.$animation-length-regular;
 
       &:hover {
-        .navLink__line {
-          width: 100%;
-        }
+        background-color: colors.$dark;
       }
-    }
-
-    .navLink__line {
-      cursor: pointer;
-      width: 0;
-      height: 2px;
-      margin-bottom: -2px;
-      margin-top: 2px;
-      background-color: colors.$primary-lightest;
-      transition: width .2s;
     }
 
     .navLink--active {
       cursor: default;
       pointer-events: none;
-
-      .navLink__line {
-        width: 100%;
-      }
+      background: colors.$dark;
     }
   `],
   changeDetection: ChangeDetectionStrategy.OnPush

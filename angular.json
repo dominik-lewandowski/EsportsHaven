@@ -18,6 +18,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styling"
+              ]
+            },
             "outputPath": "dist/esports-haven",
             "index": "src/index.html",
             "main": "src/main.ts",

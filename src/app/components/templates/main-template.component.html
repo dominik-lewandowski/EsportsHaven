@@ -3,8 +3,13 @@
   <ng-content select="eh-nav">
   </ng-content>
 
-  <div class="contentWrapper">
-    <ng-content>
+  <div class="mainWrapper">
+    <ng-content select="eh-side-nav">
     </ng-content>
+
+    <div class="contentWrapper">
+      <ng-content>
+      </ng-content>
+    </div>
   </div>
 </main>

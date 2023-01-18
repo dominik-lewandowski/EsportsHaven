@@ -1,8 +1,8 @@
-@use 'styles/colors';
-@use 'styles/mixins';
+@use 'colors';
+@use 'mixins';
 
 @import '@drizm/buttons/scss/styles';
-@import 'styles/fonts';
+@import 'fonts';
 
 // --- @drizm/buttons override
 :root {
@@ -59,11 +59,11 @@ html, body {
   }
 
   @include mixins.responsive("xxl") {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   @include mixins.responsive("xxxl") {
-    font-size: 21px;
+    font-size: 18px;
   }
 }
 

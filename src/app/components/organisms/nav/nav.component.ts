@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TranslateModule} from '@ngx-translate/core';
-import {NavLinkComponent} from '../../atoms/nav-link/nav-link.component';
+import {NavLinkComponent} from '~atoms/nav-link/nav-link.component';
 
 @Component({
   standalone: true,

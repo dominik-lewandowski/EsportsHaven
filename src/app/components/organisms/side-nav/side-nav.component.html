@@ -1,0 +1,29 @@
+<nav>
+  <section class="sideNavSection">
+    <h5 class="sideNavSection__title">{{ "NAV.GENERAL" | translate | uppercase }}</h5>
+
+    <eh-nav-link link="tournaments">
+      {{ "NAV.TOURNAMENTS" | translate }}
+    </eh-nav-link>
+
+    <eh-nav-link link="teams">
+      {{ "NAV.TEAMS" | translate }}
+    </eh-nav-link>
+  </section>
+
+  <section class="sideNavSection">
+    <h5 class="sideNavSection__title">{{ "NAV.PERSONAL" | translate | uppercase }}</h5>
+
+    <eh-nav-link [link]="user.id + '/tournaments'">
+      {{ "NAV.MY_TOURNAMENTS" | translate }}
+    </eh-nav-link>
+
+    <eh-nav-link [link]="user.id + '/teams'">
+      {{ "NAV.MY_TEAMS" | translate }}
+    </eh-nav-link>
+
+    <eh-nav-link [link]="user.id + '/scrims'">
+      {{ "NAV.MY_SCRIMS" | translate }}
+    </eh-nav-link>
+  </section>
+</nav>

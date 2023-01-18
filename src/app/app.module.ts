@@ -7,7 +7,7 @@ import {TitleStrategy} from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {PageTitleStrategy} from './_core/utils/page-title-strategy/page-title-strategy';
+import {PageTitleStrategy} from '~core/utils/page-title-strategy/page-title-strategy';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {

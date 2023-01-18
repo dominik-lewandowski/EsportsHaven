@@ -5,7 +5,7 @@ import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Observable, retry, throwError} from 'rxjs';
 import {catchError, delay, tap} from 'rxjs/operators';
 import {environment} from '../../../../environments/environment';
-import {IError} from '../../../_models/generic/http-error.model';
+import {IError} from '~models/generic/http-error.model';
 
 
 type TExtendable = object | void;

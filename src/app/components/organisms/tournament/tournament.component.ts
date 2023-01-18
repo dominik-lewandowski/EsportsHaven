@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {Tournament} from '../../../classes/tournament';
+import {Tournament} from '~classes/tournament';
 
 @Component({
   selector: 'eh-tournament',

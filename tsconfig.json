@@ -22,7 +22,24 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      // --- ATOMIC PATHS
+      "~atoms/*": ["src/app/components/atoms/*"],
+      "~molecules/*": ["src/app/components/molecules/*"],
+      "~organisms/*": ["src/app/components/organisms/*"],
+      "~pages/*": ["src/app/components/pages/*"],
+      "~templates/*": ["src/app/components/templates/*"],
+      // ---
+
+      // --- OTHER APP-LEVEL PATHS
+      "~core/*": ["src/app/_core/*"],
+      "~models/*": ["src/app/_models/*"],
+      "~shared/*": ["src/app/_shared/*"],
+      "~classes/*": ["src/app/classes/*"],
+      "~state/*": ["src/app/state/*"],
+      // ---
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

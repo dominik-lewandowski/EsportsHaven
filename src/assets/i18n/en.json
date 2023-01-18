@@ -1,5 +1,11 @@
 {
   "NAV": {
+    "GENERAL": "General",
+    "MY_SCRIMS": "Scrims",
+    "MY_TEAMS": "My teams",
+    "MY_TOURNAMENTS": "Tournaments",
+    "PERSONAL": "Personal",
+    "TEAMS": "Teams",
     "TOURNAMENTS": "Tournaments"
   }
 }

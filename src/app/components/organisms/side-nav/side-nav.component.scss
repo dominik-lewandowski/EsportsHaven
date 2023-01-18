@@ -1,0 +1,27 @@
+@use "variables";
+@use "colors";
+
+:host {
+  padding: 2rem 0;
+}
+
+nav {
+  height: 100%;
+  width: variables.$side-nav-width;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem 1rem;
+  border-right: 1px solid colors.$dark;
+}
+
+.sideNavSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sideNavSection__title {
+  color: colors.$gray-dark;
+  margin-bottom: .75rem;
+}
